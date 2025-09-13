@@ -1,0 +1,42 @@
+$ cd /workspace/shadcn-ui
+
+$ grep -r "nextMaintenance" --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" .
+
+./src/components/EngineHealthScore.tsx:    (engine.nextMaintenance.getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24)
+./src/components/EngineHealthScore.tsx:              <div>{engine.nextMaintenance.toLocaleDateString()}</div>
+./src/components/EngineHealthScore.tsx:                   (engine.nextMaintenance.getTime() - engine.lastMaintenance.getTime())) * 100
+./src/lib/cmapssData.ts:  nextMaintenance: string;
+./src/lib/cmapssData.ts:    nextMaintenance: '2024-07-15',
+./src/lib/cmapssData.ts:    nextMaintenance: '2024-08-01',
+./src/lib/cmapssData.ts:    nextMaintenance: '2024-09-10',
+./src/lib/cmapssData.ts:    nextMaintenance: '2024-07-20',
+./src/lib/cmapssData.ts:    nextMaintenance: '2024-05-15',
+./src/lib/cmapssData.ts:    nextMaintenance: '2024-06-25',
+./src/lib/cmapssData.ts:    nextMaintenance: '2024-05-01',
+./src/lib/cmapssData.ts:    nextMaintenance: '2024-04-10',
+./src/lib/cmapssData.ts:    nextMaintenance: '2024-03-05',
+./src/lib/mockData.ts:  nextMaintenance: Date;
+./src/lib/mockData.ts:    nextMaintenance: new Date(cmapssEngine.nextMaintenance)
+$ grep -r "Engine.*not found" --include="*.ts" --include="*.tsx" .
+
+./src/lib/cmapssData.ts:    throw new Error(`Engine ${engineId} not found`);
+$ pnpm run build
+
+
+> shadcnui@ build /workspace/shadcn-ui
+> vite build
+
+vite v5.4.20 building for production...
+transforming...
+✓ 3103 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                     1.01 kB │ gzip:   0.52 kB
+dist/assets/index-CMmFfDSv.css     66.12 kB │ gzip:  11.43 kB
+dist/assets/index-DtsWXmBJ.js   1,831.78 kB │ gzip: 514.88 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 13.92s

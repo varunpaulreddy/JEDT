@@ -1,0 +1,68 @@
+$ cd /workspace/shadcn-ui
+$ pnpm i && pnpm run lint && pnpm run build
+
+Lockfile is up to date, resolution step is skipped
+Packages: +481
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.../node_modules/@swc/core postinstall$ node postinstall.js
+.../node_modules/@swc/core postinstall: Done
+.../esbuild@0.21.5/node_modules/esbuild postinstall$ node install.js
+.../esbuild@0.25.9/node_modules/esbuild postinstall$ node install.js
+.../esbuild@0.21.5/node_modules/esbuild postinstall: Done
+.../esbuild@0.25.9/node_modules/esbuild postinstall: Done
+
+Done in 1.8s
+
+> shadcnui@ lint /workspace/shadcn-ui
+> eslint --quiet ./src
+
+
+> shadcnui@ build /workspace/shadcn-ui
+> vite build
+
+vite v5.4.20 building for production...
+transforming...
+✓ 3103 modules transformed.
+x Build failed in 8.99s
+error during build:
+src/lib/mockData.ts (1:9): "CMAPSSDataLoader" is not exported by "src/lib/cmapssData.ts", imported by "src/lib/mockData.ts".
+file: /workspace/shadcn-ui/src/lib/mockData.ts:1:9
+
+1: import { CMAPSSDataLoader, type CMAPSSEngine, type CMAPSSSensorReading } from './cmapssData';
+            ^
+2: 
+3: export interface Engine {
+
+    at getRollupError (file:///workspace/shadcn-ui/node_modules/.pnpm/rollup@4.50.1/node_modules/rollup/dist/es/shared/parseAst.js:401:41)
+    at error (file:///workspace/shadcn-ui/node_modules/.pnpm/rollup@4.50.1/node_modules/rollup/dist/es/shared/parseAst.js:397:42)
+    at Module.error (file:///workspace/shadcn-ui/node_modules/.pnpm/rollup@4.50.1/node_modules/rollup/dist/es/shared/node-entry.js:16920:16)
+    at Module.traceVariable (file:///workspace/shadcn-ui/node_modules/.pnpm/rollup@4.50.1/node_modules/rollup/dist/es/shared/node-entry.js:17372:29)
+    at ModuleScope.findVariable (file:///workspace/shadcn-ui/node_modules/.pnpm/rollup@4.50.1/node_modules/rollup/dist/es/shared/node-entry.js:15042:39)
+    at Identifier.bind (file:///workspace/shadcn-ui/node_modules/.pnpm/rollup@4.50.1/node_modules/rollup/dist/es/shared/node-entry.js:5400:40)
+    at NewExpression.bind (file:///workspace/shadcn-ui/node_modules/.pnpm/rollup@4.50.1/node_modules/rollup/dist/es/shared/node-entry.js:2791:23)
+    at VariableDeclarator.bind (file:///workspace/shadcn-ui/node_modules/.pnpm/rollup@4.50.1/node_modules/rollup/dist/es/shared/node-entry.js:2791:23)
+    at VariableDeclaration.bind (file:///workspace/shadcn-ui/node_modules/.pnpm/rollup@4.50.1/node_modules/rollup/dist/es/shared/node-entry.js:2787:28)
+    at Program.bind (file:///workspace/shadcn-ui/node_modules/.pnpm/rollup@4.50.1/node_modules/rollup/dist/es/shared/node-entry.js:2787:28)
+ ELIFECYCLE  Command failed with exit code 1.
+$ pnpm run build
+
+
+> shadcnui@ build /workspace/shadcn-ui
+> vite build
+
+vite v5.4.20 building for production...
+transforming...
+✓ 3103 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                     1.01 kB │ gzip:   0.52 kB
+dist/assets/index-CMmFfDSv.css     66.12 kB │ gzip:  11.43 kB
+dist/assets/index-KJuApzbX.js   1,831.21 kB │ gzip: 514.72 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 14.95s
+$ cd /workspace/shadcn-ui
+

@@ -1,0 +1,56 @@
+$ ls -la
+
+total 84894
+drwxrwxr-x  97 root root   770048 Sep 13 12:57 .
+drwxr-xr-x 496 root root 85438464 Sep 13 13:01 ..
+-rw-rw-r--   1 root root      253 Sep 13 12:12 .gitignore
+drwxrwxr-x   3 root root     8192 Sep 13 12:12 .mgx
+-rwxrwxr-x   1 root root     1322 Sep 13 12:12 README.md
+-rw-rw-r--   1 root root      414 Sep 13 12:12 components.json
+-rw-rw-r--   1 root root      789 Sep 13 12:12 eslint.config.js
+-rw-rw-r--   1 root root      914 Sep 13 12:12 index.html
+drwxr-xr-x  17 root root     4096 Sep 13 12:55 node_modules
+-rw-rw-r--   1 root root     3083 Sep 13 12:12 package.json
+-rw-r--r--   1 root root   204898 Sep 13 12:16 pnpm-lock.yaml
+-rw-rw-r--   1 root root       80 Sep 13 12:12 postcss.config.js
+drwxrwxr-x   4 root root    12288 Sep 13 12:12 public
+drwxrwxr-x  75 root root   475136 Sep 13 12:12 src
+-rw-rw-r--   1 root root     2836 Sep 13 12:12 tailwind.config.ts
+-rw-rw-r--   1 root root      818 Sep 13 12:12 template_config.json
+-rw-rw-r--   1 root root     2140 Sep 13 12:12 todo.md
+-rw-rw-r--   1 root root      652 Sep 13 12:12 tsconfig.app.json
+-rw-rw-r--   1 root root      381 Sep 13 12:12 tsconfig.json
+-rw-rw-r--   1 root root      481 Sep 13 12:12 tsconfig.node.json
+-rw-rw-r--   1 root root      430 Sep 13 12:12 vite.config.ts
+$ find . -name "*.pptx" -type f
+
+$ cd /workspace && ls -la
+
+total 166825
+drwxr-xr-x 496 root root 85438464 Sep 13 13:02 .
+drwxr-xr-x   1 root root      138 Sep 13 10:49 ..
+-rw-r--r--   1 root root 11672040 Sep 13 12:58 .MGXEnv.json
+drwxr-xr-x   3 root root     8192 Sep 13 12:19 .MGXTools
+drwxr-xr-x 359 root root 26341376 Sep 13 12:58 .git
+-rw-rw-r--   1 root root     1472 Sep 13 12:12 .gitattributes
+-rw-rw-r--   1 root root      476 Sep 13 12:12 .gitignore
+-rw-r--r--   1 root root     5736 Sep 13 13:02 .timeline.json
+-rw-r--r--   1 root root     3870 Sep 13 12:56 .wiki.md
+-rw-rw-r--   1 root root    20885 Sep 13 12:12 cmapss_data_loader.py
+-rw-rw-r--   1 root root    15707 Sep 13 12:12 cmapss_integration_guide.md
+-rw-rw-r--   1 root root   551678 Sep 13 12:12 code.ipynb
+-rw-rw-r--   1 root root     8292 Sep 13 12:12 jet_engine_digital_twin_class_diagram.mermaid
+-rw-rw-r--   1 root root    29745 Sep 13 12:12 jet_engine_digital_twin_prd.md
+-rw-rw-r--   1 root root     5360 Sep 13 12:12 jet_engine_digital_twin_sequence_diagram.mermaid
+-rw-rw-r--   1 root root    18252 Sep 13 12:12 jet_engine_digital_twin_system_design.md
+-rw-rw-r--   1 root root    26967 Sep 13 12:12 jet_engine_testing_strategy.md
+-rw-rw-r--   1 root root    32876 Sep 13 12:12 kafka_streaming_architecture.md
+-rw-rw-r--   1 root root    45254 Sep 13 12:12 microservices_specifications.md
+-rw-rw-r--   1 root root    22422 Sep 13 12:12 performance_test_scripts.py
+-rw-rw-r--   1 root root    18545 Sep 13 12:12 predictive_maintenance_api.py
+-rw-rw-r--   1 root root    31552 Sep 13 12:12 production_architecture_design.md
+-rw-rw-r--   1 root root     8177 Sep 13 12:12 real_world_data_acquisition_strategy.md
+-rw-rw-r--   1 root root        0 Sep 13 12:12 realistic_3d_engine_implementation_guide.md
+drwxrwxr-x  97 root root   770048 Sep 13 12:57 shadcn-ui
+-rw-rw-r--   1 root root    23034 Sep 13 12:12 test_data_generators.py
+drwxrwxr-x  18 root root 45723648 Sep 13 12:20 uploads
